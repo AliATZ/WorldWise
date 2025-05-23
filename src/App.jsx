@@ -9,6 +9,7 @@ import CityList from "./components/CityList.jsx";
 import {useEffect, useState} from "react";
 import CountriesList from "./components/CountriesList.jsx";
 import City from "./components/City.jsx";
+import Form from "./components/Form.jsx";
 
 const BASE_URL='http://localhost:9000';
 
@@ -44,7 +45,7 @@ export default function App(){
                 <Route path='cities' element={<CityList cities={cities} isLoading={isLoading} />}/>
                 <Route path='cities/:id' element={<City/>}/>
                 <Route path='countries' element={<CountriesList cities={cities} isLoading={isLoading} />}/>
-                <Route path='form' element={<p>List of form</p>}/>
+                <Route path='form' element={<Form/>}/>
             </Route>
             <Route path='*' element={<PageNotFound/>}/>
         </Routes>
