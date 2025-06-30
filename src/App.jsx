@@ -9,6 +9,7 @@ import CityList from "./components/CityList.jsx";
 import CountriesList from "./components/CountriesList.jsx";
 import City from "./components/City.jsx";
 import Form from "./components/Form.jsx";
+import {CitiesProvider} from "./contexts/CitiesContext.jsx";
 
 export default function App(){
     return <CitiesProvider><BrowserRouter>
