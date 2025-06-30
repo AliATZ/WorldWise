@@ -3,9 +3,12 @@ import Spinner from "./Spinner.jsx";
 import CityItem from "./CityItem.jsx";
 import Message from "./Message.jsx";
 import CountryItem from "./CountryItem.jsx";
+import {useCities} from "../contexts/CitiesContext.jsx";
 
 
-function CountriesList({cities,isLoading}) {
+function CountriesList() {
+    const {cities,isLoading} = useCities()
+
     if (isLoading) {
         <Spinner/>
     }
