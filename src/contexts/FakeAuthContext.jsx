@@ -1,5 +1,4 @@
 import {createContext, useContext, useReducer} from "react";
-import {useNavigate} from "react-router-dom";
 
 const AuthContext = createContext()
 
@@ -45,6 +44,10 @@ function useAuth() {
     if (context === undefined) {
         throw new Error("useAuth must be used within the context");
     }
+    return context;
 }
 
-export {AuthProvider,useNavigate}
+export {
+    AuthProvider,
+    useAuth
+}
